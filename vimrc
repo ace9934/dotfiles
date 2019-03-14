@@ -154,6 +154,8 @@ if &term =~ "screen"
   endif
 endif
 
+set t_Co=256
+
 augroup vimrc
   " C, C++ compile
   autocmd FileType c,cpp map <F5> :w<CR>:make %<CR>
