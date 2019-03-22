@@ -105,15 +105,15 @@ endif
 colorscheme hybrid
 
 " Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-if version >= 702
-	autocmd BufWinLeave * call clearmatches()
-endif
+" highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" match ExtraWhitespace /\s\+$/
+" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" if version >= 702
+" 	autocmd BufWinLeave * call clearmatches()
+" endif
 
 autocmd FileType c,cpp,java,python,sage setlocal expandtab
 autocmd FileType html,php,js,css setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -152,6 +152,10 @@ if &term =~ "screen"
     let &t_Sf = "\<Esc>[3%dm"
     let &t_Sb = "\<Esc>[4%dm"
   endif
+endif
+
+if &term =~ "256color"
+  set t_ut=
 endif
 
 set t_Co=256
