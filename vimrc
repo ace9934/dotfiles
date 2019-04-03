@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible              " be improved, required
 filetype off                  " required
 
 " Manual vim-plug installation
@@ -36,18 +36,18 @@ Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
-" syntatic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_ignore_extensions = '\c\v^([gx]?z|lzma|bz2|sage)$'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_quiet_messages = { "level": "warnings" }
-let g:syntastic_cpp_compiler_options = '-std=c++11'
+"let g:syntastic_ignore_extensions = '\c\v^([gx]?z|lzma|bz2|sage)$'
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_quiet_messages = { "level": "warnings" }
+"let g:syntastic_cpp_compiler_options = '-std=c++11'
 " let g:syntastic_python_checkers = ['flake8']
 
 " jedi-vim
@@ -182,3 +182,8 @@ augroup vimrc
   " sage
   autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
 augroup END
+
+" set for html
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc" 
+let g:html_indent_inctags = "html,body,head"

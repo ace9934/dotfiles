@@ -15,9 +15,6 @@ install () {
 	ln -s $NEW $OLD
 }
 
-install gitignore
-install gitconfig
-install tmux.conf
 install zshrc
 install vimrc
 
