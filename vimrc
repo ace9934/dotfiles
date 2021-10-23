@@ -29,6 +29,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+let g:snipMate = { 'snippet_version' : 1 }
 
 " Others
 Plug 'kien/ctrlp.vim'
